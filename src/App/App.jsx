@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
 
+import Board from './components/Board'
+
 function App() {
-  return <button type="button" className="square">X</button>;
+  return <Board />;
 }
 
 export default App;
