@@ -2,23 +2,20 @@ import React from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-function Square() {
-  const [value, setValue] = useState(null);
-
-  const handleClick = () => {
-    setValue('X');
-  };
-
+function Square({ value, onSquareClick }) {
   return (
     <button
       type="button"
       className="square"
-      onClick={handleClick}
+      onClick={onSquareClick}
     >
       { value }
     </button>
   );
 }
-Square.propTypes = {};
+Square.propTypes = {
+  value: PropTypes.string,
+  onSquareClick: PropTypes.func
+};
 
 export default Square;
